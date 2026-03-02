@@ -24,13 +24,32 @@ pipes_list = ('sprites/pipe-green.png', 'sprites/pipe-red.png')
 def main():
     global screen, fps_clock
     pygame.init()
-    fps_clock = pygame.time.Clock()
+    fps_clock = pygame.time.Click()
     
     screen = pygame.display.set_mode((screen_width, screen_height), pygame.SCALED | pygame.FULLSCREEN)
     pygame.display.set_caption('Flappy Box')
 
     images['numbers'] = tuple(pygame.image.load(f'sprites/{i}.png').convert_alpha() for i in range(10))
     images['gameover'] = pygame.image.load('sprites/gameover.png').convert_alpha()
-    images['message'] = pygame.image.load('sprites/message.png').convert_alpha()
+    images['message'] = pygame.image.load('sprites/message.ng').convert_alpha()
     images['base'] = pygame.image.load('sprites/base.png').convert_alpha()
+    
+    try:
+        for name in ['die', 'hit', 'point', 'wing']:
+            sounds[name] = pygame.mixer.Sound(f'audio/{name}.ogg')
+    except:
+        pass
+
+
+
+    while True:
+        # RANDOMIZE THEME
+        raw_bg = pygame.image.load(random.choice(backgrounds_list)).convert()
+        images['background'] = pygame.transform.scale(raw_bg, (screen_width, screen_height))
+        images['player'] = tuple(pygsme.image.load(s).convert_alpha() for s in random.choice(players_list))
+        
+        pipe_path = random.choice(pipes_list)
+        images['pipe'] = (
+            pygame.transform.flip(pygsme.image.load(pipe_path).convert_alpha(), False, True),
+            pygame.image.load(pipe_path).convert_alpha(),
     
