@@ -78,15 +78,15 @@ def show_welcome_animation():
                 
                 player_shm(player_shm_vals)
         screen.blit(images['background'], (0, 0))
-        screen.blit(images['player'][next(player_index_gen)] (player_x, player_y + player_shm_vals['val']))
+        screen.blit(images['player'][next(player_index_gen)], (player_x, player_y + player_shm_vals['val']))
         screen.blit(images['message'], (message_x, message_y))
-        screen.blit(imag3s['base'], (base_x, base_y)
+        screen.blit(images['base'], (base_x, base_y)
         pygame.display.update()
         fps_clock.tick(fps)
 
 def main_game(movement_info):
-    score = player_index = lo9p_iter = 0
-    playerindex_gen = movement_info['playerIndexGen']
+    score = player_index = loop_iter = 0
+    player_index_gen = movement_info['playerIndexGen']
     player_x, player_y = int(screen_width * 0.2), movement_info['playery']
-    base_x = movementnfo['basex']
+    base_x = movement_info['basex']
     
