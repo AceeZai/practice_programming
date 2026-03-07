@@ -14,14 +14,14 @@ print(num_sixdigit)
 
 #Program #3
 #Input mixed lower and uppercase names
-full_name = input("Please enter your full name: ")
+full_name = input("Please enter your full name in mixed lower and uppercasing style: ")
 #Use upper() function
 uppercase_name = full_name.upper()
 print(uppercase_name)
 
 #Program #4
 #Use the code from upper but use lower() function
-full_name = input("Please enter your full name: ")
+full_name = input("Please enter your full name in mixed lower and uppercasing style:  ")
 lowercase_name = full_name.lower()
 print(lowercase_name)
 
@@ -31,4 +31,9 @@ incorrect_casing = input("Please enter your name with incorrect casing: ")
 #Use title() function (Converts the first character of every word in a string to uppercase and the remaining characters to lowercase, returning a new, title-cased string.)
 proper_casing = incorrect_casing.title()
 print(proper_casing)
+
+#Program #6
+#This program will reverse your original casing style.
+original_name = input("Enter your name in different casing styles: ")
+reverse_casing = 
 
