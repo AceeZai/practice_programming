@@ -35,5 +35,7 @@ print(proper_casing)
 #Program #6
 #This program will reverse your original casing style.
 original_name = input("Enter your name in different casing styles: ")
-reverse_casing = 
+reverse_casing = ''.join([c.lower() if c.isupper() else c.upper() for c in full_name])
+print(reverse_casing)
+
 
