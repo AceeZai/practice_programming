@@ -64,6 +64,34 @@ else:
             break
 #done
 
+#rjust()
+user_text = input("Enter text: ")
+total_width = int(input("Enter width: "))
+
+space_count = total_width - len(user_text)
+
+if space_count > 0:
+    right_text = " " * space_count + user_text
+else:
+    right_text = user_text
+
+print(right_text)
+#done
+
+#zfill() without using zfill()
+num_text = input("Enter number text: ")
+total_width = int(input("Enter width: "))
+
+zero_count = total_width - len(num_text)
+
+if zero_count > 0:
+    filled_num = "0" * zero_count + num_text
+else:
+    filled_num = num_text
+
+print(filled_num)
+#done
+
 #count
 user_text = input("Enter text: ")
 search_char = input("Enter character: ")
@@ -85,3 +113,18 @@ for index_pos in range(len(user_text)):
     if user_text[index_pos] == search_char:
         found_index = index_pos
         break
+#done
+
+#rindex()
+user_text = input("Enter text: ")
+search_char = input("Enter character: ")
+
+found_index = -1
+
+for index_pos in range(len(user_text) - 1, -1, -1):
+    if user_text[index_pos] == search_char:
+        found_index = index_pos
+        break
+
+print(found_index)
+#done
