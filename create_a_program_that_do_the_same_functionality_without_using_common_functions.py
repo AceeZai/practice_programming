@@ -43,12 +43,19 @@ user_text = input("Enter text: ")
 all_lower = True
 #Use ascii 
 for char_item in user_text:
-    ascii_code = ord(char_item)
+    ascii_code = ord(char_item) #Checks corresponding digits
 #False loop
     if 65 <= ascii_code <= 90:
         all_lower = False
+#done 
 
 #startswith()
 #rjust
 
 #count
+user_text = input("Enter text: ")
+search_char = input("Enter character: ")
+#Set condition
+for char_item in user_text:
+    if char_item == search_char:
+        char_total += 1
