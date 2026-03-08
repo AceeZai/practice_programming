@@ -36,6 +36,19 @@ for char_item in user_text:
         upper_text += char_item
 
 print(upper_text)
+#done
 
+#lower()
+user_text = input("Enter text: ")
+all_lower = True
+#Use ascii 
+for char_item in user_text:
+    ascii_code = ord(char_item)
+#False loop
+    if 65 <= ascii_code <= 90:
+        all_lower = False
 
+#startswith()
+#rjust
 
+#count
